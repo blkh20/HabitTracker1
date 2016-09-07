@@ -53,13 +53,7 @@ public class IndividualDbHelper extends SQLiteOpenHelper {
         context.deleteDatabase(dbName);
         Log.d(LOG_TAG, "deleteDatabase method called");
     }
-
-    //Method to update the db
-    public void updateDatabase(Context context, String dbName) {
-        context.updateDatabase(dbName);
-        Log.d(LOG_TAG, "updateDatabase method called");
-    }
-    /**
+     /**
      * This is called when the database needs to be upgraded.
      */
     @Override
