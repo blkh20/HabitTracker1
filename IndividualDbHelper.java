@@ -48,18 +48,22 @@ public class IndividualDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_TABLE);
     }
 
+    // Method to delete the db
+    public void deleteDatabase(Context context, String dbName) {
+        context.deleteDatabase(dbName);
+        Log.d(LOG_TAG, "deleteDatabase method called");
+    }
+
+    //Method to update the db
+    public void updateDatabase(Context context, String dbName) {
+        context.updateDatabase(dbName);
+        Log.d(LOG_TAG, "updateDatabase method called");
+    }
     /**
      * This is called when the database needs to be upgraded.
      */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-            Log.d(LOG_TAG, "onUpgrade method called");
-    }
-    // Method to delete the db
-    public void deleteDatabase(Context context, String dbName) {
-
-        context.deleteDatabase(dbName);
-        Log.d(LOG_TAG, "deleteDatabase method called");
+        Log.d(LOG_TAG, "onUpgrade method called");
     }
 }
